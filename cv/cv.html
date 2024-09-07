@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mert Cebeci - CV</title>
+    <link rel="stylesheet" href="CV.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background"></div> <!-- Arka plan efekti -->
+    <div class="container">
+        <div class="card active" id="section1">
+            <img src="mc.jpg" alt="Mert Cebeci" class="profile-image">
+            <div class="content">
+                <h1>Ben Mert Cebeci</h1>
+                <p>Merhaba, ben Mert Cebeci. Siber güvenlik ve veri tabanı programlama konularında geniş bir bilgi ve deneyime sahip bir bilişim uzmanıyım.
+
+                    Eğitim ve Diplomalarım:
+                    
+                    Veri Tabanı Programcılığı Diploması: Şişli Mesleki ve Teknik Anadolu Lisesi
+                    Eğitimim boyunca veri tabanı yönetimi, SQL, ve çeşitli veri analizi teknikleri üzerine derinlemesine bilgi edinme fırsatı buldum.
+                    
+                    Siber Güvenlik Ön Lisans Diploması: Atlas Üniversitesi
+                    Siber güvenlik alanında kapsamlı bir eğitim aldım. Eğitimim sırasında ağ güvenliği, siber saldırı tespit sistemleri ve güvenlik politikaları gibi kritik konulara hakim oldum.</p>
+                <button onclick="showSection('section2')">></button>
+            </div>
+        </div>
+        <div class="card" id="section2">
+
+            <h1>Kariyer Yolculuğum</h1>
+            <p>Kariyerime Atom Bilişim’de stajyer teknisyen olarak başladım ve bu süreçte montaj, kodlama (HTML, C#), veritabanı yönetimi ve web geliştirme gibi çeşitli beceriler kazandım. Kasım 2022’den bu yana, Atom Bilişim’de bilişim teknikeri olarak çalıŞtım ve bilişim teknolojileri alanında pratik bilgi ve deneyimimi sürekli olarak geliştiriyorum.</p>
+            <button onclick="showSection('section3')">></button>
+        </div>
+        <div class="card" id="section3">
+            <h1>İlgi Alanlarım ve Hedeflerim</h1>
+            <p>Yazılım, web tasarımı ve siber güvenlik alanlarına olan ilgim, beni sürekli olarak bu alanlarda yenilikçi çözümler üretmeye teşvik ediyor. Teknolojinin hızla geliştiği bu dünyada, hem teknik bilgi hem de yaratıcı düşünme becerilerimi kullanarak değerli projelerde yer almak ve sürekli olarak kendimi geliştirmek hedefindeyim.</p>
+            <button onclick="showSection('section4')">></button>
+        </div>
+    </div>
+        <div class="card" id="section4">
+            <h1>Becerilerim</h1>
+            <ul>
+                <li>Ms Oficce <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
+                <li>HTML <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                <li>CSS <div class="progress"><div class="progress-bar" style="width: 70%;"></div></div></li>
+                <li>JavaScript <div class="progress"><div class="progress-bar" style="width: 60%;"></div></div></li>
+                <li>Python <div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
+            </ul>
+            <button onclick="showSection('section5')">></button>
+        </div>
+        <div class="card" id="section5">
+            <h1>Projelerim</h1>
+            <p>Altta bulunmuş olan GitHub linkinden yaptığım web sitesi kodlarını görüntüleyebilirsiniz:</p>
+            <a href="https://github.com/mertcebeci/e-ticaret" class="btn">GitHub</a>
+            <button onclick="showSection('section6')">İletişim</button>
+        </div>
+        <div class="card" id="section6">
+            <h1>İletişim</h1>
+            <p>Email: mertcebeci83@gmail.com</p>
+            <p>Telefon: 506-443-38-06</p>
+            <div class="social-media">
+                <a href="https://linkedin.com/in/mertcebeci" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/mertcebeci" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/mertcbci/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button onclick="showSection('section1')"><</button>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.card');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+     <script src="cv.js"></script>
+</body>
+</html>

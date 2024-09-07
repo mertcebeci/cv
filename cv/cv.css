@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 50px;
+    padding: 100px;
+    background: #000000; /* Arka plan siyah */
+    color: #fff;
+    overflow: hidden;
+    position: relative; /* Kar yağışı için */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('starry-sky.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.card {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: auto; /* Ortalamak için */
+    position: relative;
+    z-index: 1; /* Yıldızların üstünde görünmesi için */
+}
+
+.card.active {
+    display: block;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1abc9c;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #16a085;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.progress {
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    background: #1abc9c;
+    height: 100%;
+    width: 0;
+    transition: width 0.5s;
+}
+
+.btn {
+    background-color: #1abc9c;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #16a085;
+}
+
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    color: #1abc9c;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #16a085;
+}
+
+/* Kar Yağışı Efekti */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflake {
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Kar tanesi büyüklüğünü ve animasyon süresini rastgele belirlemek için */
+.snowflake:nth-child(1) { animation-duration: 10s; left: 10%; }
+.snowflake:nth-child(2) { animation-duration: 12s; left: 20%; }
+.snowflake:nth-child(3) { animation-duration: 8s; left: 30%; }
+.snowflake:nth-child(4) { animation-duration: 15s; left: 40%; }
+.snowflake:nth-child(5) { animation-duration: 9s; left: 50%; }
+/* Daha fazla kar tanesi için yukarıdaki gibi devam edebilirsiniz */

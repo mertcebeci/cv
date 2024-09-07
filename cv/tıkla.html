@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tıkla.css">
+  <title>Neon button</title>
+</head>
+
+<body>
+  <a class="neon" href="cv.html">Tıkla!</a>
+
+
+  <script>
+    // Kar tanelerini dinamik olarak oluşturma fonksiyonu
+    function createSnowflakes() {
+      const snowflakeCount = 100; // Kar tanesi sayısı
+      const body = document.body;
+
+      for (let i = 0; i < snowflakeCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        
+        // Kar tanesi pozisyonunu ve hızını rastgele ayarla
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() * 2 + 2 + 's';
+        snowflake.style.opacity = Math.random();
+
+        body.appendChild(snowflake);
+      }
+    }
+
+    // Sayfa yüklendiğinde kar yağışını başlat
+    window.onload = createSnowflakes;
+  </script>
+</body>
+
+</html>            
